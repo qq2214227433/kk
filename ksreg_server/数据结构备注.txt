@@ -1,0 +1,22 @@
+reg_keys_***_***
+	int1	绑定分区
+	int2	0正常卡 1为临时卡
+	int3	计次
+
+	d13int5  在线状态 0 1
+	v7ext2   特别的标识码
+
+reg_link
+	online	 在线状态 0 1
+	v7ext2   特别的标识码
+
+
+reg_xjl
+	muestexit  是否启用必须退出才可再登录功能	
+		不开启=0 
+		开启>=1  
+		1<可自动下线<61
+
+
+
+ || ($soft['muestexit']==1 && $key['v7ext2']!=$vmcode)
